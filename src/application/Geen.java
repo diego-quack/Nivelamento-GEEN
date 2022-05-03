@@ -46,7 +46,7 @@ public class Geen {
 		else if(n >= 3) {
 			num = fibonacciRecursiva(n - 1) + fibonacciRecursiva(n - 2);
 		}
-		return n;
+		return num;
 	}
 	
 	
