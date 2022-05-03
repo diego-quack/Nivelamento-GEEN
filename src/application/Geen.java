@@ -4,7 +4,7 @@ public class Geen {
 
 	public static void main(String[] args) {
 		
-		fibonacci(10);
+		System.out.println(fibonacci(20));
 
 	}
 	
@@ -14,6 +14,13 @@ public class Geen {
 		int penultimo = 0;
 		int i = 3;
 		int seguinte;
+		
+		if(n == 1) {
+			return 0;
+		}
+		if(n == 2) {
+			return 1;
+		}
 		
 		while(n > i) {
 			seguinte = ultimo + penultimo;
