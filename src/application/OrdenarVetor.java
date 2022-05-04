@@ -13,9 +13,9 @@ public class OrdenarVetor {
 		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = 10 + numeros.nextInt(90);
 		}
-		System.out.println(Arrays.toString(vetor));
+		System.out.println("Vetor gerado: " + Arrays.toString(vetor));
 		ordenar(0, vetor.length - 1, vetor);
-		System.out.println(Arrays.toString(vetor));
+		System.out.println("Vetor ordenado: " + Arrays.toString(vetor));
 
 		primo(vetor);
 
@@ -23,17 +23,20 @@ public class OrdenarVetor {
 
 	public static void primo(int[] vetor) {
 
+		boolean primo = false;
+		int i = 0;
 		int num = vetor[0];
-		for (int i = 2; i <= num; i++) {
-			boolean primo = true;
+		
+		for (i = 2; i <= vetor.length; i++) {
+			primo = true;
 			for (int j = 2; j < i; j++) {
 				if (i % j == 0) {
 					primo = false;
 				}
 			}
-			if(primo) {
-				System.out.print(num + ", ");
-			}
+		}
+		if (primo) {
+			System.out.print(i + ", ");
 		}
 	}
 
