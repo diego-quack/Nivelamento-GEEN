@@ -34,10 +34,10 @@ public class OrdenarVetor {
 
 		int j = fim;
 		int auxiliar;
-		int pivo = 0;
+		int pivo = vetor[inicio];
 
 		for (int i = fim; i >= inicio; i--) {
-			if (vetor[i] > pivo) {
+			if (vetor[i] >= pivo) {
 				auxiliar = vetor[j];
 				vetor[j] = vetor[i];
 				vetor[i] = auxiliar;
