@@ -7,6 +7,10 @@ public class OrdenarVetor {
 		
 	}
 	
+	public static void ordenar() {
+		
+	}
+	
 	public static int dividirVetor(int inicio, int fim, int[] vetor) {
 		
 		int j = fim;
