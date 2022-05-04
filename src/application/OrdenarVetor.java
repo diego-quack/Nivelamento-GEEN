@@ -1,7 +1,9 @@
 package application;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class OrdenarVetor {
 
@@ -22,22 +24,33 @@ public class OrdenarVetor {
 	}
 
 	public static void primo(int[] vetor) {
-
-		boolean primo = false;
-		int i = 0;
-		int num = vetor[0];
 		
-		for (i = 2; i <= vetor.length; i++) {
-			primo = true;
-			for (int j = 2; j < i; j++) {
-				if (i % j == 0) {
-					primo = false;
-				}
-			}
-		}
-		if (primo) {
-			System.out.print(i + ", ");
-		}
+		List<Integer> listaDePrimos = new ArrayList<Integer>();
+		List<Integer> listaDeIndices = new ArrayList<Integer>();
+	    List<Integer> lista = new ArrayList<Integer>();
+	    
+	    int i;
+	    for(i = 0; i < 10; i++) {
+	        lista.add(vetor[i]);
+	    }
+
+	    int divisor = 0;
+	    
+	    for (Integer numeroPrimo : lista) {
+	        for (int j = 1; j <= numeroPrimo; j++) {
+	            if (numeroPrimo % j == 0) {
+	                divisor++;
+	            }
+	        }
+
+	        if (divisor == 2) {
+	            listaDePrimos.add(numeroPrimo);
+	            listaDeIndices.add(i);
+	        }
+	        divisor = 0;
+	    }
+	    System.out.println("Números primos da lista: " + listaDePrimos);
+	    System.out.println("Índices: " + listaDeIndices);
 	}
 
 	public static void ordenar(int inicio, int fim, int[] vetor) {
