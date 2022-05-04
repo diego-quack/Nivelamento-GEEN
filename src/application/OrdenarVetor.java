@@ -6,17 +6,35 @@ import java.util.Arrays;
 public class OrdenarVetor {
 
 	public static void main(String[] args) {
-		
+
 		SecureRandom numeros = new SecureRandom();
 		int[] vetor = new int[10];
-		int i;
-		
-		for (i = 0; i < vetor.length; i++) {
+
+		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = 10 + numeros.nextInt(90);
 		}
 		System.out.println(Arrays.toString(vetor));
 		ordenar(0, vetor.length - 1, vetor);
 		System.out.println(Arrays.toString(vetor));
+
+		primo(vetor);
+
+	}
+
+	public static void primo(int[] vetor) {
+
+		int num = vetor[0];
+		for (int i = 2; i <= num; i++) {
+			boolean primo = true;
+			for (int j = 2; j < i; j++) {
+				if (i % j == 0) {
+					primo = false;
+				}
+			}
+			if(primo) {
+				System.out.print(num + ", ");
+			}
+		}
 	}
 
 	public static void ordenar(int inicio, int fim, int[] vetor) {
