@@ -7,7 +7,15 @@ public class OrdenarVetor {
 		
 	}
 	
-	public static void ordenar() {
+	public static void ordenar(int inicio, int fim, int[] vetor) {
+		
+		int temp;
+		
+		if(inicio < fim) {
+			temp = dividirVetor(inicio, fim, vetor);
+			ordenar(inicio, temp - 1, vetor);
+			ordenar(temp + 1, fim, vetor);
+		}
 		
 	}
 	
