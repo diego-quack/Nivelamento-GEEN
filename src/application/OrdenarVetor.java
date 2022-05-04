@@ -24,33 +24,34 @@ public class OrdenarVetor {
 	}
 
 	public static void primo(int[] vetor) {
-		
+
 		List<Integer> listaDePrimos = new ArrayList<Integer>();
 		List<Integer> listaDeIndices = new ArrayList<Integer>();
-	    List<Integer> lista = new ArrayList<Integer>();
-	    
-	    int i;
-	    for(i = 0; i < 10; i++) {
-	        lista.add(vetor[i]);
-	    }
+		List<Integer> lista = new ArrayList<Integer>();
 
-	    int divisor = 0;
-	    
-	    for (Integer numeroPrimo : lista) {
-	        for (int j = 1; j <= numeroPrimo; j++) {
-	            if (numeroPrimo % j == 0) {
-	                divisor++;
-	            }
-	        }
+		for (int i = 0; i < 10; i++) {
+			lista.add(vetor[i]);
+		}
 
-	        if (divisor == 2) {
-	            listaDePrimos.add(numeroPrimo);
-	            listaDeIndices.add(i);
-	        }
-	        divisor = 0;
-	    }
-	    System.out.println("Números primos da lista: " + listaDePrimos);
-	    System.out.println("Índices: " + listaDeIndices);
+		int divisor = 0;
+
+		for (Integer numeroPrimo : lista) {
+			for (int j = 1; j <= numeroPrimo; j++) {
+				if (numeroPrimo % j == 0) {
+					divisor++;
+				}
+			}
+
+			if (divisor == 2) {
+				listaDePrimos.add(numeroPrimo);
+			}
+			divisor = 0;
+		}
+		for (Integer indice : listaDePrimos) {
+			listaDeIndices.add(lista.indexOf(indice));
+		}
+		System.out.println("Números primos da lista: " + listaDePrimos);
+		System.out.println("Índices: " + listaDeIndices);
 	}
 
 	public static void ordenar(int inicio, int fim, int[] vetor) {
