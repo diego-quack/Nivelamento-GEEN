@@ -1,6 +1,6 @@
 package application;
 
-public class Geen {
+public class Fibonacci {
 
 	public static void main(String[] args) {
 
@@ -48,46 +48,4 @@ public class Geen {
 		}
 		return num;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
