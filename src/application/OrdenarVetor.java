@@ -47,8 +47,8 @@ public class OrdenarVetor {
 			}
 			divisor = 0;
 		}
-		for (Integer indice : listaDePrimos) {
-			listaDeIndices.add(lista.indexOf(indice));
+		for (Integer indice : lista) {
+			listaDeIndices.add(listaDePrimos.indexOf(indice));
 		}
 		System.out.println("Números primos da lista: " + listaDePrimos);
 		System.out.println("Índices: " + listaDeIndices);

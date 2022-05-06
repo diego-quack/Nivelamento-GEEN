@@ -37,7 +37,7 @@ public class Fibonacci {
 	public static int fibonacciRecursiva(int n) {
 		
 		int num = 0;
-		if(n == 0) {
+		if(n == 1) {
 			return 0;
 		}
 		else if(n == 2) {
